@@ -1,0 +1,469 @@
+.wn {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 700;
+    font-family: inherit;
+    background: linear-gradient(180deg, #e24807, #43b2f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+  .text-area-child {
+    height: 71px;
+    width: 554px;
+    position: relative;
+    border-radius: 40px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 184, 184, 0.26),
+      rgba(250, 243, 243, 0)
+    );
+    display: none;
+    max-width: 100%;
+  }
+  .about-me {
+    height: 24px;
+    position: relative;
+    font-weight: 800;
+    color: #e24807;
+    display: inline-block;
+    white-space: nowrap;
+    z-index: 1;
+  }
+  .blogs,
+  .projects,
+  .work-experience {
+    position: relative;
+    font-weight: 600;
+    z-index: 1;
+  }
+  .work-experience {
+    white-space: nowrap;
+  }
+  .blogs {
+    width: 55px;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .text-area {
+    border-radius: 40px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 184, 184, 0.26),
+      rgba(250, 243, 243, 0)
+    );
+    justify-content: flex-start;
+    padding: 25px 32px 22px 31px;
+    gap: 0 46px;
+    font-size: 18px;
+    font-family: "Nunito Sans";
+  }
+  .macbook-air-1-inner,
+  .text-area,
+  .wn-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .wn-parent {
+    width: 886px;
+    justify-content: space-between;
+    padding: 0 20px 0 0;
+    gap: 20px;
+    text-align: left;
+    font-size: 48px;
+    color: #fbfbfb;
+    font-family: Roboto;
+  }
+  .macbook-air-1-inner {
+    width: 1249px;
+    justify-content: flex-start;
+    padding: 0 0 102px 20px;
+  }
+  .sub-frame1 {
+    width: 9px;
+    height: 9px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+  }
+  .text-area1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 10px;
+  }
+  .empty-ellipse-child {
+    height: 40px;
+    width: 40px;
+    position: relative;
+  }
+  .empty-ellipse1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .empty-ellipse2 {
+    width: 9px;
+    height: 9px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #7f7f7f;
+  }
+  .empty-ellipse-group {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px 0;
+  }
+  .text-area2 {
+    width: 9px;
+    height: 9px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #7f7f7f;
+  }
+  .empty-ellipse3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 5px;
+  }
+  .frame-child {
+    height: 40px;
+    width: 40px;
+    position: relative;
+  }
+  .empty-ellipse,
+  .empty-ellipse-container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .empty-ellipse {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 9px 0;
+  }
+  .frame-x {
+    width: 9px;
+    height: 9px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #7f7f7f;
+  }
+  .empty-ellipse-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px 0;
+  }
+  .line-frames {
+    width: 9px;
+    height: 9px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #7f7f7f;
+  }
+  .about-me-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5px 0 0;
+  }
+  .welcome-frame-child {
+    height: 40px;
+    width: 40px;
+    position: relative;
+  }
+  .welcome-frame {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 0 10px;
+    gap: 20px;
+  }
+  .hey-there-greetings,
+  .welcome-to-the,
+  .who-thrives-on {
+    margin: 0;
+  }
+  .hey-there-greetings-container {
+    align-self: stretch;
+    position: relative;
+    line-height: 34px;
+    font-weight: 600;
+  }
+  .im-not-just {
+    height: 99px;
+    width: 860px;
+    position: relative;
+    line-height: 28px;
+    font-weight: 600;
+    display: inline-block;
+    flex-shrink: 0;
+    max-width: 100%;
+  }
+  .im-not-just-any-data-scientis-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 36px;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 18px;
+    color: rgba(251, 251, 251, 0.8);
+  }
+  .frame-greeting {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 27px 0;
+    max-width: 100%;
+  }
+  .ellipse-one {
+    width: 970px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 2px 0 0;
+    box-sizing: border-box;
+  }
+  .ellipse-one,
+  .frame-parent,
+  .sub-frame {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .frame-parent {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px 0;
+  }
+  .sub-frame {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 80px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 24px;
+    color: #fbfbfb;
+    font-family: "Nunito Sans";
+  }
+  .line-line-child {
+    height: 158px;
+    width: 6px;
+    position: relative;
+    object-fit: contain;
+  }
+  .line-line {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 12px 5px 20px;
+  }
+  .about-me2 {
+    margin: 0;
+    width: 318px;
+    position: relative;
+    font-size: inherit;
+    letter-spacing: 0.02em;
+    line-height: 34px;
+    font-weight: 700;
+    font-family: inherit;
+    display: inline-block;
+    transform: rotate(-90deg);
+  }
+  .line-line-item {
+    height: 158px;
+    width: 6px;
+    position: relative;
+    object-fit: contain;
+  }
+  .about-me1,
+  .frame-frame,
+  .line-line1 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .line-line1 {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 12px 0 20px;
+  }
+  .about-me1,
+  .frame-frame {
+    flex-direction: column;
+  }
+  .frame-frame {
+    align-self: stretch;
+    flex: 1;
+    align-items: center;
+    gap: 37px 0;
+  }
+  .about-me1 {
+    height: 734px;
+    width: 32px;
+    align-items: flex-start;
+    padding: 21px 0 0;
+    box-sizing: border-box;
+  }
+  .noisy-gradients-icon {
+    height: 763px;
+    width: 1030px;
+    position: relative;
+    border-radius: 74px 0 0 74px;
+    object-fit: cover;
+    display: none;
+    mix-blend-mode: normal;
+    max-width: 100%;
+  }
+  .my-journey-has {
+    margin: 0;
+    width: 908px;
+    position: relative;
+    font-size: inherit;
+    line-height: 58px;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+    flex-shrink: 0;
+    max-width: 100%;
+    z-index: 1;
+  }
+  .my-journey {
+    border-radius: 74px 0 0 74px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 92px 61px 91px;
+    box-sizing: border-box;
+    background-image: url(./public/noisygradients@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    max-width: 100%;
+    text-align: left;
+    font-size: 35px;
+    color: #fbfbfb;
+  }
+  .frame-line,
+  .macbook-air-1 {
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .frame-line {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 0 0 20px;
+    gap: 0 81px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 64px;
+    color: rgba(251, 251, 251, 0.27);
+    font-family: "Nunito Sans";
+  }
+  .macbook-air-1 {
+    width: 100%;
+    position: relative;
+    background-color: #0f161d;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 48px 0 202px;
+    gap: 114px 0;
+    letter-spacing: normal;
+  }
+  @media screen and (max-width: 1200px) {
+    .frame-line {
+      flex-wrap: wrap;
+      gap: 0 81px;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .about-me2 {
+      font-size: 51px;
+      line-height: 27px;
+    }
+    .my-journey-has {
+      font-size: 28px;
+      line-height: 46px;
+    }
+    .my-journey {
+      padding: 60px 30px 59px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .text-area {
+      display: none;
+      gap: 0 46px;
+    }
+    .wn-parent {
+      width: 332px;
+    }
+    .sub-frame {
+      padding-left: 40px;
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
+    .frame-line {
+      gap: 0 81px;
+    }
+    .macbook-air-1 {
+      gap: 114px 0;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .hey-there-greetings-container {
+      font-size: 19px;
+      line-height: 27px;
+    }
+    .about-me2 {
+      font-size: 38px;
+      line-height: 20px;
+    }
+    .frame-frame {
+      gap: 37px 0;
+    }
+    .my-journey-has {
+      font-size: 21px;
+      line-height: 35px;
+    }
+    .my-journey {
+      padding-top: 39px;
+      padding-bottom: 38px;
+      box-sizing: border-box;
+    }
+    .macbook-air-1 {
+      gap: 114px 0;
+    }
+  }
+  
