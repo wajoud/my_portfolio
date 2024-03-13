@@ -22,7 +22,7 @@ CONTACTS = 'wajoudnoorani59@gmail.com'
 URL_DOC = "/redoc"
 URL_SWAGGER = "/docs"
 
-templates = Jinja2Templates("app/templates")
+templates = Jinja2Templates("/Users/wajoud/Desktop/Rough Work/websit/fast_api_basics/portfolio/app/templates")
 
 app = FastAPI(
     title = TITLE,
@@ -33,7 +33,7 @@ app = FastAPI(
 
 handler = Mangum(app)
 
-app.mount("/assets", StaticFiles(directory="app/assets"), name="assets")
+app.mount("/assets", StaticFiles(directory="/Users/wajoud/Desktop/Rough Work/websit/fast_api_basics/portfolio/app/assets"), name="assets")
 
 @app.get("/", response_class=HTMLResponse)
 def serve_home(request: Request):
@@ -151,7 +151,3 @@ async def about() -> dict[str, str]:
         "api_url_doc": URL_DOC,
         "api_url_swagger": URL_SWAGGER
     }
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
