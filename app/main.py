@@ -13,7 +13,7 @@ from googleapiclient.errors import HttpError
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse, PlainTextResponse, FileResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse, FileResponse , RedirectResponse
 from fastapi import Form, Request
 
 MAIN_DIRECTORY = os.path.dirname(os.path.abspath(__file__))
@@ -63,9 +63,6 @@ def portfolio_homerbot(request: Request):
 def download_paper(request: Request):
     return os.path.join(MAIN_DIRECTORY, "assets", "file", "PFE.pdf")
 
-@app.get("/curriculum-vitae", response_class=FileResponse)
-def download_cv(request: Request):
-    return os.path.join(MAIN_DIRECTORY, "assets", "file", "Wajoud_Noorani.pdf")
 
 @app.get("/asian-hornet", response_class=HTMLResponse)
 def portfolio_hornet(request: Request):

@@ -22,11 +22,6 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <!-- <link href="{{ url_for('assets', path='/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ url_for('assets', path='/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ url_for('assets', path='/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-  <link href="{{ url_for('assets', path='/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-  <link href="{{ url_for('assets', path='/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet"> -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -72,7 +67,7 @@
               </li>
               <li><a href="#">Drop Down 2</a></li>
               <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li> -->
+              <li><a href="#">Drop Down 4</a></li>-->
             </ul>
         </li>
         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -112,8 +107,7 @@
                   <ul>
                     <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Wajoud H Noorani</span></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 9590010102</span></li>
-                    <!-- <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Toulouse, France</span></li> -->
-                    <li><i class="bi bi-chevron-right"></i> <strong>CV:</strong> <a target="_blank" href="/curriculum-vitae"><span>Download</span></a></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>CV:</strong> <a href="#" onclick="redirectToGoogleDrive()"><span>Download</span></a></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>Job:</strong> <span>Research</span></li>
                 </ul>
                 </div>
@@ -162,7 +156,8 @@
               </div>
             </div><End .content-->
 
-            <div class="skills-content ps-lg-4">
+            <!-----
+              <div class="skills-content ps-lg-4">
                 <div class="progress">
                   <span class="skill">Hindi <i class="val">Native</i></span>
                   <div class="progress-bar-wrap">
@@ -187,7 +182,7 @@
           </div>
         </div>
 
-      </div>
+      </div>-->
     </section><!-- End About Me Section -->
 
     <!-- ======= My Resume Section ======= -->
@@ -208,7 +203,6 @@
                 <p>
                 <ul>
                   <li>Clustering</li>
-                  <li>Tabular data</li>
                   <li>Computer Vision</li>
                   <li>Natural Language Processing</li>
                   <li>Time Series</li>
@@ -230,7 +224,18 @@
                   <p>
                   <ul>
                     <li>Python (TensorFlow, Pytorch, Scikit-Learn, Scipy, HuggingFace, ...)</li>
-                    <li>C/C++</li>
+                    <li>R Program</li>
+                    <li>MATLAB</li>
+                  </ul>
+                  </p>
+              </div>
+
+               <div class="resume-item pb-0 skill">
+                  <h4>Cloud Platform</h4>
+                  <p>
+                  <ul>
+                    <li>AWS</li>
+                    <li>GCP</li>
                   </ul>
                   </p>
               </div>
@@ -238,55 +243,63 @@
   
               <h3 class="resume-title">Education</h3>
               <div class="resume-item">
-                <h4>Big Data and Data Analytics, Artificial Intelligence</h4>
-                <h5>2017 - 2022</h5>
-                <p><em>CY-Tech, Pau, France</em></p>
-                <p>Courses: Machine Learning, Deep Learning, Quantique, (Meta)heuristic optimization, Parallel Computing.</p>
+                <h4>ME(Master of Engineering) in Big Data and Data Analytics</h4>
+                <h5>2019 - 2021</h5>
+                <p><em>Manipal School of Information Sciences, MAHE, Manipal</em></p>
               </div>
               <div class="resume-item">
-                <h4>Master in Big Data Management &amp; Analysis</h4>
-                <h5>February 2021 - June 2021</h5>
-                <p><em>Griffith College, Dublin, Ireland</em></p>
-                <p>Courses: Big Data analytics, Parallel and distributed programming, Information retrieval and web search, cloud platforms and applications.</p>
+                <h4>B. Tech (Hons) in Mechatronics Engineering</h4>
+                <h5>2016 - June 2019</h5>
+                <p><em>Manipal Institute of Technology, MAHE, Manipal</em></p>
               </div>
             </div>
             <div class="col-lg-6">
               <h3 class="resume-title">Professional Experience</h3>
               <div class="resume-item">
-                <h4>Machine Learning engineer</h4>
-                <h5>June 2022 - October 2022</h5>
-                <p><em>A.P.I Conseil, Pau, France </em></p>
+                <h4>Data Scientis</h4>
+                <h5>February 2023 - Present</h5>
+                <p><em>JAR, Bangalore</em></p>
                 <p>
-                  Creation of a reference detection tool in patents to facilitate their validation.
+                  I'm fully immersed in NLP projects, spearheading a robust data pipeline powered by Kafka's pub/sub mechanism. 
+                  From sentiment analysis to predictive modeling and recommendation systems, I'm orchestrating a dynamic blend of data sources. My goal? 
+                  Seamlessly integrating these components to unlock insights and deliver impactful solutions!
                 <ul>
-                  <li>References detection: Development of a training and testing computer vision pipes using YOLOv5 model to achieve reference detection in patent images and documents.</li>
-                  <li>References extraction: Text extraction thanks to PaddleOCR model.</li>
+                  <li>NLP on SMS Data</li>
+                  <li>Fraud Detection using graph Database </li>
+                  <li>Spends Tracker</li>
                 </ul>
                 </p>
               </div>
               <div class="resume-item">
-                <h4>Data Scientist</h4>
-                <h5>April 2022 - October 2022</h5>
-                <p><em>Safran Helicopter Engine, Bordes, France</em></p>
+                <h4>Associate data scientist </h4>
+                <h5>july 2021 - january 2023</h5>
+                <p><em>HAPPYMONK.AI , Bangalore</em></p>
                 <p>
-                  Creation of monitoring dashboards and daily equipment condition reports for helicopter engine test benches.
+                  Crafting seamless async data pipelines, I synchronize and process images from multiple cameras effortlessly. 
+                  Leveraging cutting-edge tech like Multiprocessing, I fuse detection and activity modules for live feeds. 
+                  The outcome? A precise JSON brimming with metadata, capturing every moment's essence. 
+                  My swift object detection module identifies myriad objects within each frame, powering a dynamic, real-time monitoring system.
                 <ul>
-                  <li>Predictive maintenance: Statistical and Deep Learning approach for anomaly detection on signal produced by measuring instruments. Implementation of wear and tear indicators for measuring instruments.</li>
-                  <li>Test bench hypervision: Implementation of daily reports using Zeppelin and monitoring dashboards using Grafana.</li>
+                  <li>Streaming Surveillance Face Recognition</li>
+                  <li>Activity Detection </li>
+                  <li>Pothole Detection for Telangana Mobility AI Grand Challenge</li>
+                  <li>Object Detection with re-identification</li>
                 </ul>
                 </p>
               </div>
               <div class="resume-item">
-                  <h4>Data/Software Engineer</h4>
-                  <h5>June 2020 - August 2020</h5>
-                  <p><em>Groupe BZ, Rouen, France</em></p>
-                  <p>
-                  <ul>
-                    <li>Market analysis: Implementation of Web Scrapping routines for historical database. The first steps of wheat market analysis using Scikit-Learn.</li>
-                    <li>ERP development: End to end development of an email and text message semi-supervised solution for freight forwarder scheduling. Development in Visual Basic.</li>
-                  </ul>
-                  </p>
-                </div>
+                <h4>Research Inter </h4>
+                <h5>August 2020 - july 2021</h5>
+                <p><em>Nokia Networking Pvt ltd, Bangalore</em></p>
+                <p>
+                  Revved up the 5G Research and Development Team by spearheading the creation of an internal Display module. 
+                  I hustled to process diverse network parameters from various sub-modules, crunching the data and serving it up based on network setting protocols. 
+                  Energizing the team, we powered through challenges to deliver top-notch results.
+                <ul>
+                  <li>5G Research</li>
+                </ul>
+                </p>
+              </div>
             </div>
           </div>
   
@@ -472,93 +485,6 @@
         </div>
     </section><!-- End My Portfolio Section -->
     
-
-    <!-- ======= Pricing Section ======= -->
-    <!-- <section id="pricing" class="pricing">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Pricing</span>
-          <h2>Pricing</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="box">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box featured">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> --><!-- End Pricing Section -->
-
     <!-- ======= Contact Me Section ======= -->
     <section id="contact" class="contact">
         <div class="container">
@@ -580,8 +506,6 @@
                     <h3>Social Profiles</h3>
                     <div class="social-links">
                       <a href="https://twitter.com/WajoudNoorani" class="twitter"><i class="bi bi-twitter"></i></a>
-                      <!-- <a href="https://www.facebook.com/profile.php?id=100007362638007" class="facebook"><i class="bi bi-facebook"></i></a> -->
-                      <!-- <a href="https://www.instagram.com/baptiste_urgell/" class="instagram"><i class="bi bi-instagram"></i></a> -->
                       <a href="https://github.com/wajoud" class="github"><i class="bi bi-github"></i></a>
                       <a href="www.linkedin.com/in/wajoud-noorani-7b6054118" class="linkedin"><i class="bi bi-linkedin"></i></a>
                     </div>
@@ -607,32 +531,6 @@
   
             </div>
   
-            <!-- <div class="col-lg-6">
-              <form action="/contact" method="post" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                </div>
-                <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-              </form>
-              <h3>New features comming soon !</h3>
-            </div> -->
-  
           </div>
   
         </div>
@@ -647,8 +545,6 @@
       <p>“The future is not something which happens By just waiting for time to pass. And if you want to be assured of a life after death, you have to build it yourself.” -Sam Hughes</p>
       <div class="social-links">
         <a target="_blank" href=https://twitter.com/WajoudNoorani" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <!-- <a target="_blank" href="https://www.facebook.com/profile.php?id=100007362638007" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-        <!-- <a target="_blank" href="https://www.instagram.com/baptiste_urgell/" class="instagram"><i class="bx bxl-instagram"></i></a> -->
         <a target="_blank" href="https://github.com/wajoud" class="github"><i class="bx bxl-github"></i></a>
         <a target="_blank" href="https://www.linkedin.com/in/wajoud-noorani-7b6054118/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
@@ -671,6 +567,13 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function redirectToGoogleDrive() {
+        window.open("https://drive.google.com/file/d/1d1NjolBZfzsBJDEseoiYJgYdYKQSgyqS/view?usp=sharing", "_blank");
+    }
+</script>
+
 
 </body>
 
