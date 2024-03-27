@@ -39,49 +39,16 @@ app.mount("/assets", StaticFiles(directory="app/assets"), name="assets")
 def serve_home(request: Request):
     return templates.TemplateResponse("index.html", context={'request': request})
 
-@app.get("/golf-booking-app", response_class=HTMLResponse)
+
+@app.get("/Smart-Lane-Change-Detection-AI", response_class=HTMLResponse)
 def portfolio_golf(request: Request):
-    return templates.TemplateResponse("portfolio-golf-booking-app.html", context={'request': request})
+    return templates.TemplateResponse("portfolio-Smart-Lane-Change-Detection-AI.html", context={'request': request})
 
-@app.get("/mastermind", response_class=HTMLResponse)
-def portfolio_mastermind(request: Request):
-    return templates.TemplateResponse("portfolio-mastermind.html", context={'request': request})
-   
-@app.get("/daily-coding-problem", response_class=HTMLResponse)
-def portfolio_dcp(request: Request):
-    return templates.TemplateResponse("portfolio-daily-coding-problem.html", context={'request': request})
+@app.get("/MongoDB", response_class=HTMLResponse)
+def portfolio_golf(request: Request):
+    return templates.TemplateResponse("portfolio-MongoDb.html", context={'request': request})
 
-@app.get("/euromillions-api", response_class=HTMLResponse)
-def portfolio_euromillions(request: Request):
-    return templates.TemplateResponse("portfolio-euromillions-api.html", context={'request': request})
 
-@app.get("/homer-bot", response_class=HTMLResponse)
-def portfolio_homerbot(request: Request):
-    return templates.TemplateResponse("portfolio-homer-bot.html", context={'request': request})
-
-@app.get("/homer-bot-paper", response_class=FileResponse)
-def download_paper(request: Request):
-    return os.path.join(MAIN_DIRECTORY, "assets", "file", "PFE.pdf")
-
-@app.get("/curriculum-vitae", response_class=FileResponse)
-def download_cv(request: Request):
-    return os.path.join(MAIN_DIRECTORY, "assets", "file", "Wajoud_Noorani.pdf")
-
-@app.get("/asian-hornet", response_class=HTMLResponse)
-def portfolio_hornet(request: Request):
-    return templates.TemplateResponse("portfolio-asian-hornet.html", context={'request': request})
-
-@app.get("/surfrider", response_class=HTMLResponse)
-def portfolio_surfrider(request: Request):
-    return templates.TemplateResponse("portfolio-surfrider.html", context={'request': request})
-
-@app.get("/everimpact", response_class=HTMLResponse)
-def portfolio_surfrider(request: Request):
-    return templates.TemplateResponse("portfolio-everimpact.html", context={'request': request})
-
-@app.get("/everimpact-presentation", response_class=FileResponse)
-def download_paper(request: Request):
-    return os.path.join(MAIN_DIRECTORY, "assets", "file", "everimpact.pdf")
 
 @app.post("/contact", response_class=PlainTextResponse)
 def send_email(
