@@ -40,13 +40,18 @@ def serve_home(request: Request):
     return templates.TemplateResponse("index.html", context={'request': request})
 
 
+# All Portfolio section
 @app.get("/Smart-Lane-Change-Detection-AI", response_class=HTMLResponse)
-def portfolio_golf(request: Request):
+def portfolio_Smart_Lane_Change_Detection(request: Request):
     return templates.TemplateResponse("portfolio-Smart-Lane-Change-Detection-AI.html", context={'request': request})
 
 @app.get("/MongoDB", response_class=HTMLResponse)
-def portfolio_golf(request: Request):
+def portfolio_mongodb(request: Request):
     return templates.TemplateResponse("portfolio-MongoDb.html", context={'request': request})
+
+@app.get("/Discrete-Distributions", response_class=HTMLResponse)
+def portfolio_discrete_distributions(request: Request):
+    return templates.TemplateResponse("portfolio-Discrete-Distributions.html", context={'request': request})
 
 
 
