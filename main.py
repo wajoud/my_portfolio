@@ -53,6 +53,10 @@ def portfolio_mongodb(request: Request):
 def portfolio_discrete_distributions(request: Request):
     return templates.TemplateResponse("portfolio-Discrete-Distributions.html", context={'request': request})
 
+@app.get("/PythonProjectsHub", response_class=HTMLResponse)
+def portfolio_discrete_distributions(request: Request):
+    return templates.TemplateResponse("portfolio-PythonProjectsHub.html", context={'request': request})
+
 
 
 @app.post("/contact", response_class=PlainTextResponse)
