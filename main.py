@@ -54,8 +54,24 @@ def portfolio_discrete_distributions(request: Request):
     return templates.TemplateResponse("portfolio-Discrete-Distributions.html", context={'request': request})
 
 @app.get("/PythonProjectsHub", response_class=HTMLResponse)
-def portfolio_discrete_distributions(request: Request):
+def portfolio_PythonProjectsHub(request: Request):
     return templates.TemplateResponse("portfolio-PythonProjectsHub.html", context={'request': request})
+
+@app.get("/NextGenNLP", response_class=HTMLResponse)
+def portfolio_NextGenNLP(request: Request):
+    return templates.TemplateResponse("portfolio-NextGenNLP.html", context={'request': request})
+
+@app.get("/VisionAIExplore", response_class=HTMLResponse)
+def portfolio_VisionAIExplore(request: Request):
+    return templates.TemplateResponse("portfolio-VisionAIExplore.html", context={'request': request})
+
+@app.get("/MLInnovateHub", response_class=HTMLResponse)
+def portfolio_MLInnovateHub(request: Request):
+    return templates.TemplateResponse("portfolio-MLInnovateHub.html", context={'request': request})
+
+@app.get("/DeepLearningSphere", response_class=HTMLResponse)
+def portfolio_DeepLearningSphere(request: Request):
+    return templates.TemplateResponse("portfolio-DeepLearningSphere.html", context={'request': request})
 
 
 
