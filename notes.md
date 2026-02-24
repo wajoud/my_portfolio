@@ -1,3 +1,5 @@
+vi /etc/systemd/system/portfolio.service
+
 [Unit]
 Description=Gunicorn instance to serve application
 After=network.target
@@ -11,3 +13,6 @@ ExecStart=/home/ubuntu/my_portfolio/.venv/bin/gunicorn -w 1 -k uvicorn.workers.U
 
 [Install]
 WantedBy=multi-user.target
+
+
+
