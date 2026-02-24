@@ -1,6 +1,6 @@
 vi /etc/systemd/system/portfolio.service
 
-'''
+```bash
 [Unit]
 Description=Gunicorn instance to serve application
 After=network.target
@@ -14,12 +14,12 @@ ExecStart=/home/ubuntu/my_portfolio/.venv/bin/gunicorn -w 1 -k uvicorn.workers.U
 
 [Install]
 WantedBy=multi-user.target
-'''
+```
 
 
 vi /etc/nginx/sites-available/wajoudnoorani.com
 
-'''
+```bash
 server {
     listen 80;
     server_name wajoudnoorani.com;
@@ -32,4 +32,4 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
-'''
+```
