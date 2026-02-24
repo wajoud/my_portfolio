@@ -33,3 +33,12 @@ server {
     }
 }
 ```
+
+```bash
+
+Need to chang in cloudflyer ip public - this chnage everytime we restart the ec2
+
+sudo systemctl status nginx
+sudo systemctl status portfolio.service
+
+```
