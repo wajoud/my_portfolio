@@ -13,7 +13,7 @@ from googleapiclient.errors import HttpError
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse, PlainTextResponse, FileResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse, FileResponse, RedirectResponse
 from fastapi import Form, Request
 
 MAIN_DIRECTORY = os.path.dirname(os.path.abspath(__file__))
@@ -33,45 +33,58 @@ app = FastAPI(
 
 handler = Mangum(app)
 
-app.mount("/assets", StaticFiles(directory="app/assets"), name="assets")
+# Mount static assets
+# 1. Mount legacy images for testimonials/backgrounds
+app.mount("/assets/img", StaticFiles(directory="app/assets/img"), name="legacy_img")
+
+# 2. Mount Vite built assets if they exist, otherwise fallback to legacy assets
+dist_assets_path = os.path.join(MAIN_DIRECTORY, "portfolio", "dist", "assets")
+if os.path.exists(dist_assets_path):
+    app.mount("/assets", StaticFiles(directory=dist_assets_path), name="assets")
+else:
+    app.mount("/assets", StaticFiles(directory="app/assets"), name="assets")
 
 @app.get("/", response_class=HTMLResponse)
 def serve_home(request: Request):
+    dist_index_path = os.path.join(MAIN_DIRECTORY, "portfolio", "dist", "index.html")
+    if os.path.exists(dist_index_path):
+        return FileResponse(dist_index_path)
     return templates.TemplateResponse("index.html", context={'request': request})
 
 
-# All Portfolio section
-@app.get("/Smart-Lane-Change-Detection-AI", response_class=HTMLResponse)
-def portfolio_Smart_Lane_Change_Detection(request: Request):
-    return templates.TemplateResponse("portfolio-Smart-Lane-Change-Detection-AI.html", context={'request': request})
+# All Portfolio section redirects (redirects to main page to keep visitor in modern React app layout)
+@app.get("/Smart-Lane-Change-Detection-AI")
+def portfolio_Smart_Lane_Change_Detection():
+    return RedirectResponse(url="/#projects")
 
-@app.get("/MongoDB", response_class=HTMLResponse)
-def portfolio_mongodb(request: Request):
-    return templates.TemplateResponse("portfolio-MongoDb.html", context={'request': request})
+@app.get("/MongoDB")
+def portfolio_mongodb():
+    return RedirectResponse(url="/#projects")
 
-@app.get("/Discrete-Distributions", response_class=HTMLResponse)
-def portfolio_discrete_distributions(request: Request):
-    return templates.TemplateResponse("portfolio-Discrete-Distributions.html", context={'request': request})
+@app.get("/Discrete-Distributions")
+def portfolio_discrete_distributions():
+    return RedirectResponse(url="/#projects")
 
-@app.get("/PythonProjectsHub", response_class=HTMLResponse)
-def portfolio_PythonProjectsHub(request: Request):
-    return templates.TemplateResponse("portfolio-PythonProjectsHub.html", context={'request': request})
+@app.get("/PythonProjectsHub")
+def portfolio_PythonProjectsHub():
+    return RedirectResponse(url="/#projects")
 
-@app.get("/NextGenNLP", response_class=HTMLResponse)
-def portfolio_NextGenNLP(request: Request):
-    return templates.TemplateResponse("portfolio-NextGenNLP.html", context={'request': request})
+@app.get("/NextGenNLP")
+def portfolio_NextGenNLP():
+    return RedirectResponse(url="/#projects")
 
-@app.get("/VisionAIExplore", response_class=HTMLResponse)
-def portfolio_VisionAIExplore(request: Request):
-    return templates.TemplateResponse("portfolio-VisionAIExplore.html", context={'request': request})
+@app.get("/VisionAIExplore")
+def portfolio_VisionAIExplore():
+    return RedirectResponse(url="/#projects")
 
-@app.get("/MLInnovateHub", response_class=HTMLResponse)
-def portfolio_MLInnovateHub(request: Request):
-    return templates.TemplateResponse("portfolio-MLInnovateHub.html", context={'request': request})
+@app.get("/MLInnovateHub")
+def portfolio_MLInnovateHub():
+    return RedirectResponse(url="/#projects")
 
-@app.get("/DeepLearningSphere", response_class=HTMLResponse)
-def portfolio_DeepLearningSphere(request: Request):
-    return templates.TemplateResponse("portfolio-DeepLearningSphere.html", context={'request': request})
+@app.get("/DeepLearningSphere")
+def portfolio_DeepLearningSphere():
+    return RedirectResponse(url="/#projects")
+
 
 
 
