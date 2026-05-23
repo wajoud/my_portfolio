@@ -1,11 +1,11 @@
 <div align="center">
 
 <!-- ══════════════════ ANIMATED HEADER ══════════════════ -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=220&section=header&text=Wajoud%20H%20Noorani&fontSize=56&fontColor=ffffff&fontAlignY=36&desc=Data%20Scientist%20%7C%20ML%20Engineer%20%7C%20AI%20Builder&descAlignY=56&descSize=20&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=220&section=header&text=Wajoud%20H%20Noorani&fontSize=56&fontColor=ffffff&fontAlignY=36&desc=Data%20Scientist%20%7C%20LLM%20Engineer%20%7C%20AI%20Builder&descAlignY=56&descSize=20&animation=fadeIn" width="100%"/>
 
 <!-- ══════════════════ TYPING ANIMATION ══════════════════ -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=38BDF8&center=true&vCenter=true&multiline=false&width=700&lines=Building+AI+%26+ML+systems+that+matter+%F0%9F%9A%80;Deep+Learning+%7C+NLP+%7C+Computer+Vision+%F0%9F%A7%A0;FastAPI+%7C+AWS+%7C+Production+Deployments+%E2%98%81%EF%B8%8F;Open+to+exciting+collaborations+%F0%9F%A4%9D" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=24&duration=3000&pause=800&color=38BDF8&center=true&vCenter=true&multiline=false&width=700&lines=Building+Agentic+AI+%26+ML+Systems+%F0%9F%9A%80;Deep+Learning+%7C+NLP+%7C+Computer+Vision+%F0%9F%A7%A0;FastAPI+%7C+React+%7C+AWS+Production+%E2%98%81%EF%B8%8F;Turning+Complex+Data+into+Elegant+APIs+%F0%9F%94%A5" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -15,8 +15,8 @@
   <a href="https://www.linkedin.com/in/wajoud-noorani-7b6054118/">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
-  <a href="https://twitter.com/WajoudNoorani">
-    <img src="https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/>
+  <a href="https://medium.com/@wajoudnoorani59">
+    <img src="https://img.shields.io/badge/Medium-Read-12100E?style=for-the-badge&logo=medium&logoColor=white"/>
   </a>
   <a href="https://wajoudnoorani.com">
     <img src="https://img.shields.io/badge/Portfolio-Visit-38bdf8?style=for-the-badge&logo=google-chrome&logoColor=white"/>
@@ -42,27 +42,26 @@
 
 ```python
 class WajoudNoorani:
-    name        = "Wajoud H Noorani"
-    role        = "Data Scientist & ML Engineer"
-    location    = "🌍 Remote / Global"
-    website     = "wajoudnoorani.com"
+    name         = "Wajoud H Noorani"
+    role         = "Data Scientist & LLM Engineer"
+    location     = "🌍 Remote / Global"
+    website      = "wajoudnoorani.com"
 
-    languages   = ["Python", "SQL", "TypeScript", "JavaScript", "Bash"]
+    languages    = ["Python", "SQL", "TypeScript", "JavaScript", "Bash"]
     
-    ml_stack    = ["PyTorch", "TensorFlow", "Scikit-learn",
-                   "HuggingFace", "OpenCV", "NLTK"]
+    ml_stack     = ["PyTorch", "TensorFlow", "Scikit-learn",
+                    "HuggingFace", "OpenCV", "NLTK", "Neo4j"]
     
-    frontend    = ["React", "Vite", "Tailwind CSS", "Framer Motion"]
+    frontend     = ["React", "Vite", "Tailwind CSS", "Framer Motion"]
     
-    backend     = ["FastAPI", "Uvicorn", "Gunicorn", "Jinja2"]
+    backend      = ["FastAPI", "Uvicorn", "Gunicorn", "Jinja2", "NATS"]
     
-    cloud_devops = ["AWS EC2", "AWS Lambda", "Nginx",
-                    "Certbot", "Docker", "Git", "Linux"]
+    cloud_devops = ["AWS EC2", "AWS Lambda", "Nginx", "Docker", "Git"]
     
-    interests   = ["LLMs", "Computer Vision", "NLP",
-                   "MLOps", "Autonomous Systems"]
+    interests    = ["Agentic AI", "Graph Fraud Analytics", "LLMOps", 
+                    "Edge CV Systems", "Distributed Streams"]
     
-    fun_fact    = "I turn coffee ☕ into ML models 🤖"
+    fun_fact     = "I turn coffee ☕ into high-performance ML models 🤖"
 ```
 
 <br clear="right"/>
@@ -79,6 +78,7 @@ class WajoudNoorani:
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![Neo4j](https://img.shields.io/badge/Neo4j-008CC1?style=for-the-badge&logo=neo4j&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -90,13 +90,14 @@ class WajoudNoorani:
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![FramerMotion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-### 🌐 Backend & API
+### 🌐 Backend & API Gateway
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![NATS](https://img.shields.io/badge/NATS-27AAE1?style=for-the-badge&logo=nats-io&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-### ☁️ Cloud, DevOps & Database
+### ☁️ Cloud, DevOps & Distributed Data
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -129,16 +130,16 @@ class WajoudNoorani:
 
 <div align="center">
 
-| 🏆 | Project | Domain | Highlights |
+| 🏆 Status | Project Name | Tech Domain | Primary Highlights |
 |:---:|---|:---:|---|
-| ⭐ | 🚗 [**Smart Lane Change Detection AI**](https://wajoudnoorani.com/Smart-Lane-Change-Detection-AI) | Computer Vision | Real-time lane change detection with deep learning |
-| ⭐ | 🧠 [**NextGenNLP**](https://wajoudnoorani.com/NextGenNLP) | NLP | Advanced NLP pipelines & transformer models |
-| ⭐ | 👁️ [**VisionAIExplore**](https://wajoudnoorani.com/VisionAIExplore) | Computer Vision | Cutting-edge vision AI research & demos |
-| 🔥 | 🤖 [**MLInnovateHub**](https://wajoudnoorani.com/MLInnovateHub) | Machine Learning | Collection of innovative ML experiments |
-| 🔥 | 🌐 [**DeepLearningSphere**](https://wajoudnoorani.com/DeepLearningSphere) | Deep Learning | Neural net experiments & pre-trained models |
-| 💡 | 🐍 [**PythonProjectsHub**](https://wajoudnoorani.com/PythonProjectsHub) | Python | Practical Python projects & utilities |
-| 💡 | 🍃 [**MongoDB**](https://wajoudnoorani.com/MongoDB) | Database | MongoDB design patterns & walkthroughs |
-| 💡 | 📊 [**Discrete Distributions**](https://wajoudnoorani.com/Discrete-Distributions) | Statistics | Interactive statistical visualizations |
+| ⭐ **Star** | 🚗 [**Smart Lane Change Detection AI**](https://wajoudnoorani.com/Smart-Lane-Change-Detection-AI) | Computer Vision | Real-time automated lane change detection with Deep Learning & YOLO |
+| ⭐ **Star** | 🧠 [**NextGenNLP**](https://wajoudnoorani.com/NextGenNLP) | NLP / LLMs | Advanced Transformer pipelines, sequence tags, & interactive text modules |
+| ⭐ **Star** | 👁️ [**VisionAIExplore**](https://wajoudnoorani.com/VisionAIExplore) | Computer Vision | Cutting-edge Vision models, edge analytics, and real-time streaming demos |
+| 🔥 **Hot** | 🤖 [**MLInnovateHub**](https://wajoudnoorani.com/MLInnovateHub) | Machine Learning | Experimental dashboard showcasing tabular Classifiers, Regressors, & feature loops |
+| 🔥 **Hot** | 🌐 [**DeepLearningSphere**](https://wajoudnoorani.com/DeepLearningSphere) | Deep Learning | Interactive weights inspection, neural net overlays, & pre-trained benchmarks |
+| 💡 **Idea** | 🐍 [**PythonProjectsHub**](https://wajoudnoorani.com/PythonProjectsHub) | Python Dev | Curated utilities, system monitors, multithreading brokers, and core modules |
+| 💡 **Idea** | 🍃 [**MongoDB**](https://wajoudnoorani.com/MongoDB) | Database | Advanced aggregation patterns, indexing architectures, and cluster guides |
+| 💡 **Idea** | 📊 [**Discrete Distributions**](https://wajoudnoorani.com/Discrete-Distributions) | Statistics | Beautiful visualizer evaluating statistical properties & sample sequences |
 
 </div>
 
@@ -150,7 +151,7 @@ This repository has been fully upgraded to a **decoupled modern architecture** f
 
 <div align="center">
 
-| Feature | Description | Performance Gain |
+| Core Feature | Technical Implementation | Practical Performance Gain |
 |---|---|:---:|
 | ⚡ **GPU-Accelerated Marquee** | Pure CSS infinite marquee animation replacing CPU-heavy JS scroll event listeners. | **0% Scroll CPU overhead** |
 | 🛡️ **Ultra-Lightweight Assets** | Swapped **75 massive external GIFs** (150MB+) for custom glowing **tech-stack inline SVG badges**. | **300x Payload Reduction** (from 150MB+ to <500KB) |
@@ -177,7 +178,7 @@ This repository has been fully upgraded to a **decoupled modern architecture** f
                       └──────────────┬─────────────┘
                                      │ Async Delivery
                                      ▼
-                              [ 📧 Gmail API ]
+                               [ 📧 Gmail API ]
 ```
 
 ---
@@ -223,11 +224,16 @@ Use this if you are actively editing React code. It enables Hot Module Replaceme
    ```
    > 🌐 Open **[http://localhost:5173](http://localhost:5173)** in your browser. Vite automatically proxies any backend operations like `/contact` to the FastAPI backend running on port 8000.
 
+---
 
-## ☁️ Production Deployment — AWS EC2 + Ubuntu
+## ☁️ Production Deployment
+
+Choose the deployment strategy that best fits your infrastructure needs:
 
 <details>
-<summary>📦 <strong>Click to expand full production deployment guide</strong></summary>
+<summary>📦 <strong>Option A: Virtual Private Server (AWS EC2 / Ubuntu) — Full Control Guide</strong></summary>
+
+<br/>
 
 ### Step 1 · Server Setup
 ```bash
@@ -328,10 +334,14 @@ sudo journalctl -u portfolio.service -f    # Live logs
 sudo tail -f /var/log/nginx/error.log      # Nginx errors
 ```
 
+<br/>
+
 </details>
 
 <details>
-<summary>⚡ <strong>Option B: Platform-as-a-Service deployment (Render / Railway) — Easiest Path</strong></summary>
+<summary>⚡ <strong>Option B: Platform-as-a-Service (Render / Railway) — Easiest Path</strong></summary>
+
+<br/>
 
 For zero-server configuration, auto-SSL, and automatic Git pushes:
 1. Connect your repository to **Render** (render.com) or **Railway** (railway.app).
@@ -341,10 +351,14 @@ For zero-server configuration, auto-SSL, and automatic Git pushes:
    - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
 3. Click **Deploy**. The platform automatically manages everything!
 
+<br/>
+
 </details>
 
 <details>
-<summary>☁️ <strong>Option C: Serverless deployment (AWS Lambda + Mangum)</strong></summary>
+<summary>☁️ <strong>Option C: Serverless Deployment (AWS Lambda + Mangum)</strong></summary>
+
+<br/>
 
 Your backend is pre-configured for AWS Lambda using the **Mangum** adapter in `main.py`:
 ```python
@@ -352,6 +366,8 @@ from mangum import Mangum
 handler = Mangum(app)
 ```
 You can deploy this directory serverless using the **Serverless Framework** (`serverless.yml`) or AWS SAM. It routes all FastAPI traffic and React static views through AWS API Gateway to AWS Lambda, resulting in a zero-maintenance, virtually free ($0/mo) hosting tier!
+
+<br/>
 
 </details>
 
