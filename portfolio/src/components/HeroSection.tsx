@@ -49,12 +49,12 @@ const HeroSection = () => {
       </FadeIn>
 
       {/* ── Bottom Bar ── */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end flex-1 px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 relative z-20 gap-6 sm:gap-0">
+      <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end flex-1 px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 relative z-20 gap-6 sm:gap-0 mt-4 sm:mt-0">
         {/* Left description */}
         <FadeIn delay={0.35} y={20}>
           <p
-            className="text-left text-[#D7E2EA] font-semibold uppercase tracking-wide leading-tight
-              max-w-[190px] xs:max-w-[230px] sm:max-w-[280px] md:max-w-[320px]"
+            className="text-center sm:text-left text-[#D7E2EA] font-semibold uppercase tracking-wide leading-tight
+              max-w-[280px] md:max-w-[320px]"
             style={{ fontSize: 'clamp(0.85rem, 1.5vw, 1.4rem)' }}
           >
             Data Scientist &amp; LLM Engineer
@@ -74,10 +74,9 @@ const HeroSection = () => {
       <FadeIn
         delay={0.6}
         y={30}
-        className="absolute right-0 bottom-0 z-10
-          w-[160px] xs:w-[190px] sm:right-auto sm:left-1/2 sm:-translate-x-1/2
-          sm:w-[360px] md:w-[440px] lg:w-[520px]
-          opacity-70 sm:opacity-100 transition-all duration-300"
+        className="relative sm:absolute self-center sm:left-1/2 sm:-translate-x-1/2 z-10
+          sm:bottom-0 my-auto sm:my-0
+          w-[180px] xs:w-[220px] sm:w-[360px] md:w-[440px] lg:w-[520px]"
       >
         <Magnet padding={150} strength={3} activeTransition="transform 0.3s ease-out" inactiveTransition="transform 0.6s ease-in-out">
           <img
