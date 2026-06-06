@@ -20,6 +20,14 @@ const TESTIMONIALS = [
     quote:
       "Wajoud and I worked together for a year in happymonk AI Labs. I found him very knowledgeable, team-player and dynamic in work. He has diverse knowledge in Deep Learning, ML and IoT. He is a good programmer and can manage all the hardware as well as software related problems quickly. Wajoud is a seeker, always ready to learn new technologies.",
   },
+  {
+    name: 'Rashmi Prabhakar',
+    role: 'Product Design Lead at Dhan AI',
+    image: '/assets/img/testimonials/Rashmi_Prabhakar.jpg',
+    linkedin: 'https://www.linkedin.com/in/rashmi-prabhakar-10/',
+    quote:
+      "I worked as Product Designer and collaborated closely with Wajoud as a team at Happymonk.ai, I can confidently attest to his exceptional dedication and insightful approach to his work as a Data Scientist. Wajoud consistently brought a high level of passion and critical thinking to our projects, offering valuable insights that greatly enriched our design process. His commitment to excellence and enthusiasm for his work were evident in every interaction, making him a valuable asset to any team fortunate enough to have him onboard.",
+  },
 ];
 
 const TestimonialsSection = () => {

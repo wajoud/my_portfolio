@@ -7,7 +7,7 @@ interface CVButtonProps {
 const CVButton = ({ className }: CVButtonProps) => {
   return (
     <a
-      href="https://drive.google.com/file/d/1Ji5MjXC80xJwzqFM3Le3yna3A9OlDgkQ/view?usp=sharing"
+      href="https://drive.google.com/file/d/1EnWuC_rSwB3pmdb1PutijU5rGJPvn9ov/view?usp=drive_link"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-block"
