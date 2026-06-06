@@ -134,7 +134,7 @@ const TestimonialsSection = () => {
             </div>
 
             {/* Profile Image & Meta */}
-            <div className="flex flex-col items-center text-center md:items-start md:text-left gap-4 flex-shrink-0 w-[140px] sm:w-[160px]">
+            <div className="flex flex-row md:flex-col items-center md:items-start text-left gap-4 flex-shrink-0 w-full md:w-[160px]">
               <div className="relative group">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#7621B0] to-[#BE4C00] rounded-full blur opacity-60 group-hover:opacity-100 transition duration-500" />
                 <img
@@ -145,7 +145,7 @@ const TestimonialsSection = () => {
                     // Fallback to initial if image fails
                     e.currentTarget.src = `https://api.dicebear.com/7.x/initials/svg?seed=${activeTestimonial.name}`;
                   }}
-                  className="relative w-28 h-28 sm:w-32 sm:h-32 object-cover rounded-full border-2 border-[#0C0C0C]"
+                  className="relative w-20 h-20 xs:w-24 xs:h-24 md:w-32 md:h-32 object-cover rounded-full border-2 border-[#0C0C0C]"
                 />
               </div>
 
@@ -176,7 +176,7 @@ const TestimonialsSection = () => {
               <p className="text-[#D7E2EA] font-light leading-relaxed text-sm sm:text-base md:text-lg opacity-85 italic">
                 "{activeTestimonial.quote}"
               </p>
-              
+
               {/* Pagination Dots (Mobile) & Controls (Desktop) */}
               <div className="flex items-center justify-between mt-8 border-t border-white/5 pt-4">
                 <div className="flex gap-2">
@@ -187,9 +187,8 @@ const TestimonialsSection = () => {
                         setDirection(i > index ? 1 : -1);
                         setIndex(i);
                       }}
-                      className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                        i === index ? 'bg-[#B600A8] w-6' : 'bg-white/20'
-                      }`}
+                      className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === index ? 'bg-[#B600A8] w-6' : 'bg-white/20'
+                        }`}
                       aria-label={`Go to slide ${i + 1}`}
                     />
                   ))}
