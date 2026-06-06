@@ -38,7 +38,7 @@ const HeroSection = () => {
       </FadeIn>
 
       {/* ── Hero Heading ── */}
-      <FadeIn delay={0.15} y={40} className="mt-8 sm:mt-12 md:mt-16 px-6 md:px-10 relative z-0">
+      <FadeIn delay={0.15} y={40} className="mt-20 sm:mt-24 md:mt-28 px-6 md:px-10 relative z-0">
         <h1
           className="hero-heading font-black uppercase tracking-tighter leading-[0.85] flex flex-col w-full
             text-[13vw] sm:text-[14vw] md:text-[15vw] lg:text-[16vw]"
@@ -75,9 +75,9 @@ const HeroSection = () => {
         delay={0.6}
         y={30}
         className="absolute left-1/2 -translate-x-1/2 z-10
-          top-[42%] -translate-y-1/2
-          sm:top-auto sm:translate-y-0 sm:bottom-0
-          w-[240px] sm:w-[360px] md:w-[440px] lg:w-[520px]"
+          bottom-0
+          w-[200px] sm:w-[360px] md:w-[440px] lg:w-[520px]
+          opacity-50 sm:opacity-100 transition-all duration-300"
       >
         <Magnet padding={150} strength={3} activeTransition="transform 0.3s ease-out" inactiveTransition="transform 0.6s ease-in-out">
           <img
