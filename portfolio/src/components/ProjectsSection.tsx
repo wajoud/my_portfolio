@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import FadeIn from './FadeIn';
 import LiveProjectButton from './LiveProjectButton';
@@ -146,31 +146,32 @@ const ProjectDetailsModal = ({ project, onClose }: { project: typeof PROJECTS[0]
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-[#0C0C0C]/90 backdrop-blur-md z-50 flex items-center justify-center p-4 md:p-6"
+      className="fixed inset-0 bg-[#0C0C0C]/90 backdrop-blur-md z-[100] flex items-center justify-center p-4 md:p-6"
       onClick={onClose}
     >
+      {/* Close Button (Fixed on screen top-right, avoids scroll cutoff and navbar overlap) */}
+      <button
+        onClick={onClose}
+        className="fixed top-6 right-6 md:top-8 md:right-8 text-[#D7E2EA]/60 hover:text-[#D7E2EA] hover:scale-110 
+          transition-all duration-200 cursor-pointer z-[110] bg-[#141414]/80 backdrop-blur-md p-2.5 rounded-full border border-white/10"
+        aria-label="Close details"
+      >
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
       <motion.div
         initial={{ scale: 0.95, y: 20, opacity: 0 }}
         animate={{ scale: 1, y: 0, opacity: 1 }}
         exit={{ scale: 0.95, y: 0, opacity: 0 }}
         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
         className="relative w-full max-w-5xl bg-[#141414]/95 border border-white/10 rounded-[32px] 
-          overflow-hidden shadow-2xl p-6 md:p-10 flex flex-col md:flex-row gap-8 max-h-[90vh] overflow-y-auto"
+          shadow-2xl p-6 md:p-10 flex flex-col md:flex-row gap-8 max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-6 right-6 text-[#D7E2EA]/60 hover:text-[#D7E2EA] hover:scale-110 
-            transition-all duration-200 cursor-pointer z-10"
-        >
-          <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-
         {/* Left Column: Image Viewer */}
-        <div className="flex-1 flex flex-col gap-4">
+        <div className="w-full flex-none md:flex-1 flex flex-col gap-4">
           <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/5 bg-[#0C0C0C]">
             <img src={activeImg} alt={project.name} className="w-full h-full object-cover" />
           </div>
@@ -189,7 +190,7 @@ const ProjectDetailsModal = ({ project, onClose }: { project: typeof PROJECTS[0]
         </div>
 
         {/* Right Column: Project Info */}
-        <div className="flex-1 flex flex-col justify-between gap-6 md:pt-4">
+        <div className="w-full flex-none md:flex-1 flex flex-col justify-between gap-6 md:pt-4">
           <div className="flex flex-col gap-4">
             <span className="text-[#38BDF8] font-bold uppercase tracking-widest text-sm">{project.category}</span>
             <h3 className="hero-heading font-black text-3xl md:text-4xl uppercase tracking-tight leading-tight">{project.name}</h3>
@@ -229,6 +230,21 @@ const ProjectDetailsModal = ({ project, onClose }: { project: typeof PROJECTS[0]
 const ProjectsSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [selectedProject, setSelectedProject] = useState<(typeof PROJECTS)[0] | null>(null);
+
+  // Lock scroll and tag body when project details modal is open
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+      document.body.setAttribute('data-modal-open', 'true');
+    } else {
+      document.body.style.overflow = 'unset';
+      document.body.removeAttribute('data-modal-open');
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.body.removeAttribute('data-modal-open');
+    };
+  }, [selectedProject]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
