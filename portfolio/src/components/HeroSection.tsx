@@ -25,7 +25,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen flex flex-col"
+      className="relative min-h-[100dvh] sm:h-screen flex flex-col"
       style={{ overflowX: 'clip', background: '#0C0C0C' }}
     >
       {/* ── Navigation Wrapper ── */}
@@ -111,18 +111,18 @@ const HeroSection = () => {
       </AnimatePresence>
 
       {/* ── Hero Heading ── */}
-      <FadeIn delay={0.15} y={40} className="mt-20 sm:mt-24 md:mt-28 px-6 md:px-10 relative z-0">
+      <FadeIn delay={0.15} y={40} className="mt-32 sm:mt-24 md:mt-28 px-6 md:px-10 relative z-0">
         <h1
-          className="hero-heading font-black uppercase tracking-tighter leading-[0.85] flex flex-col w-full
-            text-[13vw] sm:text-[14vw] md:text-[15vw] lg:text-[16vw]"
+          className="hero-heading font-black uppercase tracking-tighter leading-[0.95] sm:leading-[0.85] flex flex-col w-full text-center
+            text-[12vw] sm:text-[14vw] md:text-[15vw] lg:text-[16vw]"
         >
-          <span className="block text-left">Hey,</span>
-          <span className="block text-right">I&apos;m Wajoud</span>
+          <span className="block text-center sm:text-left">Hey,</span>
+          <span className="block text-center sm:text-right">I&apos;m Wajoud</span>
         </h1>
       </FadeIn>
 
       {/* ── Bottom Bar ── */}
-      <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end flex-1 px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 relative z-20 gap-6 sm:gap-0 mt-4 sm:mt-0">
+      <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end flex-1 px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 relative z-20 gap-6 sm:gap-0 mt-10 sm:mt-0">
         {/* Left description */}
         <FadeIn delay={0.35} y={20}>
           <p
