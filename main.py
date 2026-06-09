@@ -131,7 +131,8 @@ def send_email(
             .decode()
 
         create_message = {
-            'raw': encoded_message
+            'raw': encoded_message,
+            'labelIds': ['INBOX', 'UNREAD']
         }
         # pylint: disable=E1101
         service.users().messages().insert(userId="me", body=create_message).execute()
