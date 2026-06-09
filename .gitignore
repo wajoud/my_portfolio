@@ -1,3 +1,7 @@
 .venv
 __pycache__
 .DS_Store
+
+# Google API Credentials & Tokens
+credentials.json
+token.json

@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import type { ElementType, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import type { Variants, HTMLMotionProps } from 'framer-motion';
@@ -36,7 +37,7 @@ const FadeIn = ({
     },
   };
 
-  const MotionTag = motion(Tag as ElementType);
+  const MotionTag = useMemo(() => motion(Tag as ElementType), [Tag]);
 
   return (
     <MotionTag
