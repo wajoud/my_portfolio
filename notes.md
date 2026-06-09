@@ -42,3 +42,28 @@ sudo systemctl status nginx
 sudo systemctl status portfolio.service
 
 ```
+
+## Deployment / Update Flow on EC2
+
+Since `credentials.json` and `token.json` are ignored by git, transfer them manually from your local machine to the server:
+
+```bash
+# 1. From local machine, copy credentials & tokens:
+scp credentials.json token.json ubuntu@wajoudnoorani.com:/home/ubuntu/my_portfolio/
+
+# 2. SSH into your EC2 server:
+ssh ubuntu@wajoudnoorani.com
+
+# 3. Pull latest code changes:
+cd ~/my_portfolio
+git pull
+
+# 4. Rebuild the frontend assets:
+cd portfolio
+npm run build
+cd ..
+
+# 5. Restart the backend service:
+sudo systemctl restart portfolio.service
+sudo systemctl status portfolio.service
+```
