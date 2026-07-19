@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import FadeIn from './FadeIn';
-import { ExternalLink, Mail, Phone, Send, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
+import { ExternalLink, Mail, Phone } from 'lucide-react';
 
 const SOCIAL = [
   {
@@ -33,56 +32,6 @@ const SOCIAL = [
 ];
 
 const ContactSection = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
-      setStatus('error');
-      setErrorMessage('Please fill out all fields before sending.');
-      return;
-    }
-
-    setStatus('loading');
-    setErrorMessage('');
-
-    try {
-      const formData = new FormData();
-      formData.append('name', name.trim());
-      formData.append('email', email.trim());
-      formData.append('subject', subject.trim());
-      formData.append('message', message.trim());
-
-      const response = await fetch('/contact', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const result = await response.text();
-      
-      if (response.ok && result.trim() === 'OK') {
-        setStatus('success');
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
-      } else {
-        throw new Error(result || 'Failed to send message. Please verify credentials.');
-      }
-    } catch (err: any) {
-      console.error(err);
-      setStatus('error');
-      setErrorMessage(
-        err.message || 'An error occurred while transmitting your message. Please try again.'
-      );
-    }
-  };
-
   return (
     <section
       id="contact"
@@ -102,6 +51,7 @@ const ContactSection = () => {
       </FadeIn>
 
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-12 sm:gap-16 relative z-10">
+
         {/* Quote */}
         <FadeIn delay={0.1} y={20}>
           <blockquote
@@ -116,130 +66,50 @@ const ContactSection = () => {
           </blockquote>
         </FadeIn>
 
-        {/* ── Contact Form ── */}
+        {/* ── Get In Touch Card ── */}
         <FadeIn delay={0.2} y={30} className="w-full max-w-2xl">
-          <form
-            onSubmit={handleSubmit}
-            className="w-full bg-[#141414]/70 border border-white/5 p-6 sm:p-10 rounded-[30px] sm:rounded-[40px] flex flex-col gap-6"
+          <div
+            className="w-full bg-[#141414]/70 border border-white/5 p-8 sm:p-12 rounded-[30px] sm:rounded-[40px] flex flex-col items-center gap-6 text-center"
             style={{
               boxShadow: '0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.02)',
               backdropFilter: 'blur(20px)',
             }}
           >
-            {/* Form Title */}
-            <div className="text-center sm:text-left mb-2">
-              <h3 className="text-[#D7E2EA] uppercase tracking-widest font-black text-lg">
-                Send a Message
+            <div>
+              <h3 className="text-[#D7E2EA] uppercase tracking-widest font-black text-lg mb-3">
+                Let's Work Together
               </h3>
-              <p className="text-[#D7E2EA]/40 font-light text-xs mt-1">
-                Have a question or want to work together? Let's connect!
+              <p className="text-[#D7E2EA]/40 font-light text-sm max-w-sm mx-auto leading-relaxed">
+                Have a project in mind, a collaboration idea, or just want to say hi?
+                Reach out directly — I'd love to connect.
               </p>
             </div>
 
-            {/* Inputs Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {/* Name */}
-              <div>
-                <label className="text-[#D7E2EA]/50 uppercase tracking-widest text-[10px] font-semibold mb-2 block">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="John Doe"
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-[#D7E2EA] placeholder-[#D7E2EA]/20 focus:border-[#B600A8] focus:bg-white/[0.06] transition-all duration-300 outline-none font-light tracking-wide text-sm sm:text-base"
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label className="text-[#D7E2EA]/50 uppercase tracking-widest text-[10px] font-semibold mb-2 block">
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="john@example.com"
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-[#D7E2EA] placeholder-[#D7E2EA]/20 focus:border-[#B600A8] focus:bg-white/[0.06] transition-all duration-300 outline-none font-light tracking-wide text-sm sm:text-base"
-                />
-              </div>
-            </div>
-
-            {/* Subject */}
-            <div>
-              <label className="text-[#D7E2EA]/50 uppercase tracking-widest text-[10px] font-semibold mb-2 block">
-                Subject
-              </label>
-              <input
-                type="text"
-                required
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-                placeholder="Collaboration opportunity / Project Inquiry"
-                className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-[#D7E2EA] placeholder-[#D7E2EA]/20 focus:border-[#B600A8] focus:bg-white/[0.06] transition-all duration-300 outline-none font-light tracking-wide text-sm sm:text-base"
-              />
-            </div>
-
-            {/* Message */}
-            <div>
-              <label className="text-[#D7E2EA]/50 uppercase tracking-widest text-[10px] font-semibold mb-2 block">
-                Message
-              </label>
-              <textarea
-                required
-                rows={5}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Describe your project, timeline, or idea..."
-                className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-[#D7E2EA] placeholder-[#D7E2EA]/20 focus:border-[#B600A8] focus:bg-white/[0.06] transition-all duration-300 outline-none font-light tracking-wide text-sm sm:text-base resize-none"
-              />
-            </div>
-
-            {/* Status Feedback Banner */}
-            {status === 'success' && (
-              <div className="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 p-4 rounded-2xl text-sm sm:text-base">
-                <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                <span>Your message has been successfully transmitted directly to Wajoud's inbox!</span>
-              </div>
-            )}
-            {status === 'error' && (
-              <div className="flex items-center gap-3 bg-rose-500/10 border border-rose-500/20 text-rose-400 p-4 rounded-2xl text-sm sm:text-base">
-                <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                <span>{errorMessage}</span>
-              </div>
-            )}
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="w-full rounded-full font-medium uppercase tracking-widest text-white cursor-pointer py-4 text-sm flex items-center justify-center gap-2 transition-all duration-300 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed mt-2"
+            <a
+              href="mailto:wajoudnoorani59@gmail.com?subject=Let's%20Connect"
+              className="rounded-full font-medium uppercase tracking-widest text-white cursor-pointer px-10 py-4 text-sm flex items-center gap-2 transition-all duration-300 hover:opacity-90"
               style={{
-                background:
-                  'linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)',
-                boxShadow:
-                  '0px 4px 10px rgba(181, 1, 167, 0.25), inset 4px 4px 12px #7721B1',
+                background: 'linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)',
+                boxShadow: '0px 4px 10px rgba(181, 1, 167, 0.25), inset 4px 4px 12px #7721B1',
                 outline: '2px solid white',
                 outlineOffset: '-3px',
               }}
             >
-              {status === 'loading' ? (
-                <>
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                  Sending Message...
-                </>
-              ) : (
-                <>
-                  <Send className="w-4 h-4" />
-                  Send Message
-                </>
-              )}
-            </button>
-          </form>
+              <Mail className="w-4 h-4" />
+              Send Me an Email
+            </a>
+
+            {/* Fallback — visible email for copy/paste */}
+            <p className="text-[#D7E2EA]/30 text-xs font-light">
+              or reach me directly at{' '}
+              <a
+                href="mailto:wajoudnoorani59@gmail.com"
+                className="text-[#D7E2EA]/60 hover:text-[#D7E2EA] underline underline-offset-4 decoration-dotted transition-colors duration-200"
+              >
+                wajoudnoorani59@gmail.com
+              </a>
+            </p>
+          </div>
         </FadeIn>
 
         {/* Contact Cards */}

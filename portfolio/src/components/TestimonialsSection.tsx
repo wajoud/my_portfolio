@@ -7,7 +7,7 @@ const TESTIMONIALS = [
   {
     name: 'Priyam Chakraborty',
     role: 'Lead Data Scientist',
-    image: '/assets/img/testimonials/Priyam_Chakraborty.jpg',
+    image: '/testimonials/Priyam_Chakraborty.jpg',
     linkedin: 'https://www.linkedin.com/in/priyam-chakraborty-10412a86/',
     quote:
       "Wajoud has an all-round passion for machine learning. He has been exceptional with YOLO-based object detection, face re-identification, license plate recognition and PyTorch-based activity recognition. To add, he has experience with video streaming framework (GStreamer), 'New York' map module, NATS messaging passing, APIs and embedded systems. He is meticulous with interns in problem-solving, and I wish him all the best to retain his enthusiasm.",
@@ -15,7 +15,7 @@ const TESTIMONIALS = [
   {
     name: 'Kakoli Bora',
     role: 'Data Scientist',
-    image: '/assets/img/testimonials/Kakoli_Bora.jpg',
+    image: '/testimonials/Kakoli_Bora.jpg',
     linkedin: 'https://www.linkedin.com/in/kakoli-bora-261a0315/',
     quote:
       "Wajoud and I worked together for a year in happymonk AI Labs. I found him very knowledgeable, team-player and dynamic in work. He has diverse knowledge in Deep Learning, ML and IoT. He is a good programmer and can manage all the hardware as well as software related problems quickly. Wajoud is a seeker, always ready to learn new technologies.",
@@ -23,7 +23,7 @@ const TESTIMONIALS = [
   {
     name: 'Rashmi Prabhakar',
     role: 'Product Design Lead at Dhan AI',
-    image: '/assets/img/testimonials/Rashmi_Prabhakar.jpg',
+    image: '/testimonials/Rashmi_Prabhakar.jpg',
     linkedin: 'https://www.linkedin.com/in/rashmi-prabhakar-10/',
     quote:
       "I worked as Product Designer and collaborated closely with Wajoud as a team at Happymonk.ai, I can confidently attest to his exceptional dedication and insightful approach to his work as a Data Scientist. Wajoud consistently brought a high level of passion and critical thinking to our projects, offering valuable insights that greatly enriched our design process. His commitment to excellence and enthusiasm for his work were evident in every interaction, making him a valuable asset to any team fortunate enough to have him onboard.",
@@ -90,7 +90,7 @@ const TestimonialsSection = () => {
   return (
     <section
       id="testimonials"
-      className="bg-[#0C0C0C] px-5 sm:px-8 md:px-10 py-24 sm:py-32 relative overflow-hidden"
+      className="bg-[#0C0C0C] px-5 sm:px-8 md:px-10 py-24 sm:py-32 relative overflow-hidden scroll-mt-20"
     >
       {/* Background Decorative Gradients */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] bg-[#7621B0]/10 rounded-full blur-[100px] pointer-events-none" />
